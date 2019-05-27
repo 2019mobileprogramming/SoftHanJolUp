@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="o1.mobile.softhanjolup.DB.course",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_d_b_1_1course.html",tooltip=" "];
+}

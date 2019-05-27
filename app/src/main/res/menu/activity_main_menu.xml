@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Home">
+        <menu>
+            <item
+                android:id="@+id/SideHomee"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Home" />
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/SideCourse"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="수강목록" />
+        <item
+            android:id="@+id/SideVolun"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="봉사" />
+        <item
+            android:id="@+id/SideTOEIC"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="토익" />
+        <item
+            android:id="@+id/SideBook"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="도서(독후감)" />
+    </group>
+</menu>

@@ -1,0 +1,12 @@
+digraph "o1.mobile.softhanjolup.DB.course.createCourseDB"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="o1.mobile.softhanjolup.DB.course.create\lCourseDB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="o1.mobile.softhanjolup.DB.course\l_DBHelper.onCreate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_d_b_1_1course___d_b_helper.html#a56b6315bc7e05901ebf083c60fb51526",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="o1.mobile.softhanjolup.DB.course\l_DBHelper.onUpgrade",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_d_b_1_1course___d_b_helper.html#ad4fca871c316c716524995b6a0c504d8",tooltip=" "];
+}

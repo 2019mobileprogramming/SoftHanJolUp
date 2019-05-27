@@ -1,0 +1,26 @@
+var namespaceandroid_1_1support =
+[
+    [ "asynclayoutinflater", "namespaceandroid_1_1support_1_1asynclayoutinflater.html", "namespaceandroid_1_1support_1_1asynclayoutinflater" ],
+    [ "compat", "namespaceandroid_1_1support_1_1compat.html", "namespaceandroid_1_1support_1_1compat" ],
+    [ "constraint", "namespaceandroid_1_1support_1_1constraint.html", "namespaceandroid_1_1support_1_1constraint" ],
+    [ "coordinatorlayout", "namespaceandroid_1_1support_1_1coordinatorlayout.html", "namespaceandroid_1_1support_1_1coordinatorlayout" ],
+    [ "coreui", "namespaceandroid_1_1support_1_1coreui.html", "namespaceandroid_1_1support_1_1coreui" ],
+    [ "coreutils", "namespaceandroid_1_1support_1_1coreutils.html", "namespaceandroid_1_1support_1_1coreutils" ],
+    [ "cursoradapter", "namespaceandroid_1_1support_1_1cursoradapter.html", "namespaceandroid_1_1support_1_1cursoradapter" ],
+    [ "customview", "namespaceandroid_1_1support_1_1customview.html", "namespaceandroid_1_1support_1_1customview" ],
+    [ "design", "namespaceandroid_1_1support_1_1design.html", "namespaceandroid_1_1support_1_1design" ],
+    [ "documentfile", "namespaceandroid_1_1support_1_1documentfile.html", "namespaceandroid_1_1support_1_1documentfile" ],
+    [ "drawerlayout", "namespaceandroid_1_1support_1_1drawerlayout.html", "namespaceandroid_1_1support_1_1drawerlayout" ],
+    [ "fragment", "namespaceandroid_1_1support_1_1fragment.html", "namespaceandroid_1_1support_1_1fragment" ],
+    [ "graphics", "namespaceandroid_1_1support_1_1graphics.html", "namespaceandroid_1_1support_1_1graphics" ],
+    [ "interpolator", "namespaceandroid_1_1support_1_1interpolator.html", "namespaceandroid_1_1support_1_1interpolator" ],
+    [ "loader", "namespaceandroid_1_1support_1_1loader.html", "namespaceandroid_1_1support_1_1loader" ],
+    [ "localbroadcastmanager", "namespaceandroid_1_1support_1_1localbroadcastmanager.html", "namespaceandroid_1_1support_1_1localbroadcastmanager" ],
+    [ "mediacompat", "namespaceandroid_1_1support_1_1mediacompat.html", "namespaceandroid_1_1support_1_1mediacompat" ],
+    [ "print", "namespaceandroid_1_1support_1_1print.html", "namespaceandroid_1_1support_1_1print" ],
+    [ "slidingpanelayout", "namespaceandroid_1_1support_1_1slidingpanelayout.html", "namespaceandroid_1_1support_1_1slidingpanelayout" ],
+    [ "swiperefreshlayout", "namespaceandroid_1_1support_1_1swiperefreshlayout.html", "namespaceandroid_1_1support_1_1swiperefreshlayout" ],
+    [ "transition", "namespaceandroid_1_1support_1_1transition.html", "namespaceandroid_1_1support_1_1transition" ],
+    [ "v4", "namespaceandroid_1_1support_1_1v4.html", "namespaceandroid_1_1support_1_1v4" ],
+    [ "v7", "namespaceandroid_1_1support_1_1v7.html", "namespaceandroid_1_1support_1_1v7" ]
+];

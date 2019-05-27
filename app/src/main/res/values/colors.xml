@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#AB47BC</color>
+    <color name="colorPrimaryDark">#8B329B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="tabCourseBackground">#D59BDF</color>
+    <color name="tabCourseTextColor">#3B1E6D</color>
+    <color name="tabCourseSelectedTextColor">#F1EDF7</color>
+
+
+    <color name="doneBackground">#F2E9F5</color>
+    <color name="nodoneBackground">#FFFFFF</color>
+    <color name="courseBackground">#FFFFFF</color>
+</resources>

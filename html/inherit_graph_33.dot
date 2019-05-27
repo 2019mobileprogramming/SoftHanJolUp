@@ -1,0 +1,22 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node48 [label="Fragment",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node48 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="o1.mobile.softhanjolup.Book.f\l_book_dept_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_book_1_1f__book__dept__j.html",tooltip=" "];
+  Node48 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node50 [label="o1.mobile.softhanjolup.Book.f\l_book_uni_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_book_1_1f__book__uni__j.html",tooltip=" "];
+  Node48 -> Node51 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node51 [label="o1.mobile.softhanjolup.Course.f\l_course_1st_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_course_1_1f__course__1st__j.html",tooltip=" "];
+  Node48 -> Node52 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node52 [label="o1.mobile.softhanjolup.Course.f\l_course_2nd_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_course_1_1f__course__2nd__j.html",tooltip=" "];
+  Node48 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node53 [label="o1.mobile.softhanjolup.Course.f\l_course_3rd_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_course_1_1f__course__3rd__j.html",tooltip=" "];
+  Node48 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="o1.mobile.softhanjolup.Course.f\l_course_4th_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1_course_1_1f__course__4th__j.html",tooltip=" "];
+  Node48 -> Node55 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node55 [label="o1.mobile.softhanjolup.f\l_home_main_j",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classo1_1_1mobile_1_1softhanjolup_1_1f__home__main__j.html",tooltip=" "];
+}

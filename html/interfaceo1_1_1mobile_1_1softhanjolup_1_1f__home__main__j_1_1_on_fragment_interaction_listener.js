@@ -1,0 +1,4 @@
+var interfaceo1_1_1mobile_1_1softhanjolup_1_1f__home__main__j_1_1_on_fragment_interaction_listener =
+[
+    [ "onFragmentInteraction", "interfaceo1_1_1mobile_1_1softhanjolup_1_1f__home__main__j_1_1_on_fragment_interaction_listener.html#ae7ddeac18c048285bea0849612c970f4", null ]
+];

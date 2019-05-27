@@ -1,0 +1,11 @@
+digraph "o1.mobile.softhanjolup.Book.a_book_main_j"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{o1.mobile.softhanjolup.Book.a\l_book_main_j\n|~ fragment1\l~ fragment2\l~ tabs\l|+ onBackPressed()\l+ onCreateOptionsMenu()\l+ onOptionsItemSelected()\l+ onNavigationItemSelected()\l# onCreate()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{AppCompatActivity\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{OnNavigationItemSelected\lListener\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

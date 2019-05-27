@@ -1,0 +1,7 @@
+digraph "o1.mobile.softhanjolup.BuildConfig"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{o1.mobile.softhanjolup.Build\lConfig\n|+ DEBUG\l+ APPLICATION_ID\l+ BUILD_TYPE\l+ FLAVOR\l+ VERSION_CODE\l+ VERSION_NAME\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}
