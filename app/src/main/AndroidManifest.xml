@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="o1.mobile.softhanjolup">
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,14 +20,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".Course.a_course_main_j"
-            android:theme="@style/AppTheme.NoActionBar">
-</activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Volunteer.a_volun_main_j"
         android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".English.a_english_main_j"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Book.a_book_main_j"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Course.a_course_otherDB_j"/>
 
     </application>
 

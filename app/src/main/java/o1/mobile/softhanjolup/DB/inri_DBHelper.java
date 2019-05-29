@@ -6,20 +6,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class inri_DBHelper extends SQLiteOpenHelper {
     String sql;
-    String tempsql;
 
     public inri_DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         sql = "CREATE TABLE inri_DB (_id INTEGER PRIMARY KEY AUTOINCREMENT, courseName TEXT, semester INTEGER);" ;
 
         db.execSQL(sql);
 
-        inri tempDB = new inri(db);
-        tempDB.createInriDB(db);
+        db.execSQL("INSERT INTO inri_DB VALUES(0, '가천 리더십', 0);");
+        db.execSQL("INSERT INTO inri_DB VALUES(1, '생명과 나눔', 0);");
+        db.execSQL("INSERT INTO inri_DB VALUES(2, '한국사', 0);");
+
     }
 
     @Override

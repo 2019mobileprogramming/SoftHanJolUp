@@ -8,6 +8,7 @@
     <string name="nav_header_desc">Navigation header@string</string>
     <string name="action_insert">새 과목 추가하기</string>
     <string name="action_delete">기존 과목 삭제하기</string>
+    <string name="action_other">트랙/교양</string>
     <string name="info1"> - 노인대상 봉사 10회 이상\n   (전체 20시간 이상, 노인 목용봉사 : 2시간 인정)</string>
     <string name="info2"> - SW 가치확산 노인 봉사 포함\n   (기초 컴퓨터 활용법, 스마트폰 사용법 교육 등)</string>
     <string name="info3"> - 인증방법: VMS, 1365자원봉사센터 추천\n   (봉상활동 인증 확인서, 노인 봉사만 해당)</string>

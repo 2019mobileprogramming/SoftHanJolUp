@@ -65,11 +65,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" /> <!-- 공백 -->
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,6 +87,65 @@
             android:layout_height="wrap_content"
             android:text="@string/info4"
             android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[ VMS 검색 ]"
+            android:layout_gravity="center"
+            android:textColor="#ab47bc"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_VMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="검색어 입력"/>
+            <Button
+                android:id="@+id/VMSBtn"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VMS검색"
+                android:background="@color/tabCourseBackground"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[ 1365 검색 ]"
+            android:layout_gravity="center"
+            android:textColor="#ab47bc"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/Btn_1365"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1365 검색 바로가기"
+                android:background="@color/tabCourseBackground"/>
+
+        </LinearLayout>
 
         <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"

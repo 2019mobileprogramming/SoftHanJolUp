@@ -267,7 +267,12 @@ public class a_course_main_j extends AppCompatActivity
 
             dialogDel.show();
         }
+        else if(id == R.id.course_action_other){
+            Intent intent = new Intent(getApplicationContext(), a_course_otherDB_j.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
+
     }
 
     public void delete(int year, int semester, String courseName){
