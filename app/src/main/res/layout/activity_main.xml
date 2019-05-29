@@ -10,8 +10,8 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical">
 
         <include
@@ -20,12 +20,960 @@
             android:layout_height="wrap_content" />
 
 
-        <Button
-            android:id="@+id/tempBtn"
+        <TextView
+            android:id="@+id/creditInfo1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="YEAH!"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="#ab47bc"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/creditInfo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:text="20학점 남았어요!"
+            android:textSize="20dp"
+            android:textColor="#ab47bc"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/> <!-- ad1457 -->
+
+
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="*"
+            android:padding="10dp"
+            >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#ab47bc"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="구분"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#ab47bc"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="영역"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#ab47bc"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="과목명"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#ab47bc"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="기준"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#ab47bc"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="이수"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- ************************* 1번줄 - 기초 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:text="기초교양"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="의사소통"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="과기글\n프잉1, 2, 3, 4"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="6"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+
+            <!-- ************************* 2번줄 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="SW 기초"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="소프트웨어의 생태계"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="2"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242"/>
+            </TableRow>
+
+            <!-- ************************* 3번줄 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="인성과 리더십"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="생명과 나눔\n한국사, 가천리더심 -> 택2\n인성세미나, 진로세미나"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="6"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+            <!-- ************************* 4번줄 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="창의와 사고"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="역사와 상상력, 사고와 표현\n논리적 사고, 창의적 사고 -> 택2"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="4"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+
+            <!-- ************************* 5번줄 - 융합 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="융합교양"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="사회와 역사"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="글로벌시대의 리더십"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="2"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+            <!-- ************************* 6번줄 - 융합 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="세계와 문화"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="중국어1,2 / 일본어1,2\n문화콘텐츠와 스토리텔링\n이슬람 문화의 이해 -> 택2"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="4"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+
+
+            <!-- ************************* 7번줄 - 일반선택 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="일반선택"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="(필수수강)"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Business English"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="2"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+            <!-- ************************* 8번줄 - 일반선택 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="사회와 역사"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="동아시아의 이해\n서양문명의 역사\n세계의 전쟁과 평화 -> 택2"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="4"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+            <!-- ************************* 9번줄 - 일반선택 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="(선택수강)"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="(학점 맞춰서 채우기)"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="^_^"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+
+            <!-- ************************* 10번줄 - 전공 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="전공"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="전공필수"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="학년*6과목/소산세/졸작*3"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="68"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+            <!-- ************************* 11번줄 - 전공 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="전공선택"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="경제학개론, 기술경영\n에코에듀세미나, 현장실습"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="7"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+            <!-- ************************* 12번줄 - 전공 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="트랙"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="General 트랙 / Big Data 트랙"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="12"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#6a1b9a"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+
+            <!-- ************************* 마지막줄_총합 ****************************** -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="총합"
+                    android:textColor="#ad1457"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="120"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#ad1457"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="#f3e5f5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="#424242" />
+            </TableRow>
+        </TableLayout>
     </LinearLayout>
+
+
 
 
 

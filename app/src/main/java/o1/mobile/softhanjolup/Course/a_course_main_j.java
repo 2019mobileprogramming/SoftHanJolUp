@@ -10,23 +10,18 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import o1.mobile.softhanjolup.Book.a_book_main_j;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
@@ -147,24 +142,7 @@ public class a_course_main_j extends AppCompatActivity
 
 
 
-    int newId = 0;
-    //id, year, semester, courseName, credit, index, done
-    public void insert(int year, int semester, String courseName, int credit){
 
-        int tempID = 80+newId;
-        db=dbHelper.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("_id", tempID);
-        values.put("year", year);
-        values.put("semester", semester);
-        values.put("courseName", courseName);
-        values.put("credit", credit);
-        values.put("index_course", 7);//일반선택
-        values.put("done", 0);
-        newId++;
-
-        db.insert("DB_Course", null, values);
-    }
 
     @Override
     public void onBackPressed() {
@@ -184,7 +162,7 @@ public class a_course_main_j extends AppCompatActivity
         return true;
     }
 
-    Dialog dialog;
+    Dialog dialogAdd;
     Spinner course_new_year;
     Spinner course_new_semester;
     EditText course_new_courseName;
@@ -195,20 +173,30 @@ public class a_course_main_j extends AppCompatActivity
     String newCourse = "new";
     String newCredit = "0";
 
+    Dialog dialogDel;
+    Spinner course_del_year;
+    Spinner course_del_semester;
+    EditText course_del_courseName;
+    Button course_delBtn;
+    int delYear = 1;
+    int delSemester = 1;
+    String delCourse = "del";
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.course_action_settings) {
-            dialog = new Dialog(a_course_main_j.this);
+        if (id == R.id.course_action_add) {
+            dialogAdd = new Dialog(a_course_main_j.this);
 
-            dialog.setContentView(R.layout.course_new_record_x);
+            dialogAdd.setContentView(R.layout.course_new_record_x);
 
-             course_new_year = dialog.findViewById(R.id.course_new_year);
-             course_new_semester = dialog.findViewById(R.id.course_new_semester);
-             course_new_courseName = dialog.findViewById(R.id.course_new_courseName);
-             course_new_credit = dialog.findViewById(R.id.course_new_credit);
-             newCourseAddBtn = dialog.findViewById(R.id.course_new_addBtn);
+             course_new_year = dialogAdd.findViewById(R.id.course_new_year);
+             course_new_semester = dialogAdd.findViewById(R.id.course_new_semester);
+             course_new_courseName = dialogAdd.findViewById(R.id.course_new_courseName);
+             course_new_credit = dialogAdd.findViewById(R.id.course_new_credit);
+             newCourseAddBtn = dialogAdd.findViewById(R.id.course_new_addBtn);
 
             course_new_year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -227,22 +215,90 @@ public class a_course_main_j extends AppCompatActivity
                 public void onNothingSelected(AdapterView<?> parent) { newSemester = 1;}
             });
 
-
             newCourseAddBtn.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
                     newCourse = course_new_courseName.getText().toString();
                     newCredit = course_new_credit.getText().toString();
                     insert(newYear, newSemester,newCourse, Integer.parseInt(newCredit));
-                    dialog.dismiss();
+                    dialogAdd.dismiss();
                 }
             });
 
-            dialog.show();
+            dialogAdd.show();
 
             return true;
         }
+        else if(id == R.id.course_action_delete){
+            dialogDel = new Dialog(a_course_main_j.this);
+
+            dialogDel.setContentView(R.layout.course_delete_record_x);
+
+            course_del_year = dialogDel.findViewById(R.id.course_del_year);
+            course_del_semester = dialogDel.findViewById(R.id.course_del_semester);
+            course_del_courseName = dialogDel.findViewById(R.id.course_del_courseName);
+            course_delBtn = dialogDel.findViewById(R.id.course_delBtn);
+
+            course_del_year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    delYear = position+1;
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) { delYear = 1; }
+            });
+            course_del_semester.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    delSemester = position+1;
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) { delSemester = 1;}
+            });
+
+            course_delBtn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    delCourse = course_del_courseName.getText().toString();
+                    delete(delYear, delSemester,delCourse);
+                    dialogDel.dismiss();
+                }
+            });
+
+            dialogDel.show();
+        }
+        else if(id == R.id.course_action_other){
+            Intent intent = new Intent(getApplicationContext(), a_course_otherDB_j.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
+
+    }
+
+    public void delete(int year, int semester, String courseName){
+        db=dbHelper.getWritableDatabase();
+
+        db.delete("DB_Course", "year = ? and semester = ? and courseName = ?", new String[]{Integer.toString(year), Integer.toString(semester), courseName});
+
+    }
+
+    int newId = 0;
+    //id, year, semester, courseName, credit, index, done
+    public void insert(int year, int semester, String courseName, int credit){
+
+        int tempID = 80+newId;
+        db=dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("_id", tempID);
+        values.put("year", year);
+        values.put("semester", semester);
+        values.put("courseName", courseName);
+        values.put("credit", credit);
+        values.put("index_course", 7);//일반선택
+        values.put("done", 0);
+        newId++;
+
+        db.insert("DB_Course", null, values);
     }
 
     @Override

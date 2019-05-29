@@ -2,8 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/course_action_settings"
+        android:id="@+id/course_action_add"
         android:orderInCategory="100"
         android:title="@string/action_insert"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/course_action_delete"
+        android:orderInCategory="100"
+        android:title="@string/action_delete"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/course_action_other"
+        android:orderInCategory="100"
+        android:title="@string/action_other"
         app:showAsAction="never" />
 </menu>
