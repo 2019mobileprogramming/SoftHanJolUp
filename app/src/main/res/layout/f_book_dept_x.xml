@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#8FD8AA">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <TableLayout
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="2.5"
+                android:layout_height="wrap_content"
+                android:text="도서명"
+                android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/firstYear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="dept" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="0sp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="작가"
+                android:textSize="15sp"/>
+        </TableRow>
+    </TableLayout>
+
+
+
+    <ListView
+        android:layout_margin="12sp"
+        android:id="@+id/book_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2sp"
+        android:divider="@color/tabCourseBackground"
+        android:dividerHeight="1sp"/>
 
 </LinearLayout>

@@ -35,21 +35,24 @@ EditText titleView, contentView;
     int calculatedCredit=0;
     TextView creditView;
     View headView;
+    TextView creditInfo1;
+    TextView creditInfo2;
 
     final static String dbName = "SHJU_DB.db";
     final static int dbVersion = 3;
 
-Button Btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        dbHelper = new course_DBHelper(this, dbName, null, dbVersion);
 
         titleView = findViewById(R.id.editText1);
         contentView = findViewById(R.id.editText2);
-        Btn = findViewById(R.id.tempBtn);
+        creditInfo1 = findViewById(R.id.creditInfo1);
+        creditInfo2 = findViewById(R.id.creditInfo2);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -58,25 +61,55 @@ Button Btn;
         toggle.syncState();
 
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        calculatedCredit = bundle.getInt("credit");
+
+        /*Intent intent = getIntent();
+        if(intent != null){
+            Bundle bundle = intent.getExtras();
+            calculatedCredit = bundle.getInt("credit");
+        }
+        else{*/
+            calculatedCredit =calCredit();;
+      // }
 
         headView = navigationView.getHeaderView(0);
         creditView = headView.findViewById(R.id.nav_creditView);
         String creditText = getString(R.string.nav_credit1) + calculatedCredit + getString(R.string.nav_credit2);
         creditView.setText(creditText);
-        Btn.setText(creditText);
+        creditInfo1.setText("졸업까지");
+        int tempCredit = 120 - calculatedCredit;
+        creditText =  tempCredit + "학점 남았어요!";
+        creditInfo2.setText(creditText);
 
 
-        dbHelper = new course_DBHelper(this, dbName, null, dbVersion);
 
     }
 
+    public void updateCredit(){
+        creditView = headView.findViewById(R.id.nav_creditView);
+        int tempC = calCredit();
+        String creditText = getString(R.string.nav_credit1) + tempC + getString(R.string.nav_credit2);
+        creditView.setText(creditText);
+    }
 
+    Cursor cursor;
+    public int calCredit(){
+        int tempCredit=0;
+
+        db=dbHelper.getReadableDatabase();
+        sql = "select * from DB_Course where done is 1";
+
+        cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+        for(int i = 0; i<cursor.getCount(); i++){
+            tempCredit += cursor.getInt(cursor.getColumnIndex("credit"));
+            cursor.moveToNext();
+        }
+
+        return tempCredit;
+    }
 
     @Override
     public void onBackPressed() {
@@ -118,7 +151,7 @@ Button Btn;
         //Fragment myFragment = null;
         //Class fragmentClass;
 
-        if (id == R.id.SideHomee) {//홈 창으로 이동
+        if (id == R.id.SideHome) {//홈 창으로 이동
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
 
