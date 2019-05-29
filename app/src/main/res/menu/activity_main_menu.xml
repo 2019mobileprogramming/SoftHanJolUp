@@ -7,26 +7,27 @@
         <menu>
             <item
                 android:id="@+id/SideHomee"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_home_black_24dp"
                 android:title="Home" />
         </menu>
     </item>
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:title="졸업요건 가이드">
         <item
             android:id="@+id/SideCourse"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_location_city_black_24dp"
             android:title="수강목록" />
         <item
             android:id="@+id/SideVolun"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
             android:title="봉사" />
         <item
             android:id="@+id/SideTOEIC"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_spellcheck_black_24dp"
             android:title="토익" />
         <item
             android:id="@+id/SideBook"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_class_black_24dp"
             android:title="도서(독후감)" />
     </group>
 </menu>

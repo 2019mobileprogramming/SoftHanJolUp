@@ -6,7 +6,13 @@
     <string name="nav_credit1">졸업까지 </string>
     <string name="nav_credit2">/120 학점 남았습니다.</string>
     <string name="nav_header_desc">Navigation header@string</string>
-    <string name="action_insert">새 항목 추가하기</string>
-    <string name="volunteerInfo">- 노인대상 봉사 10회 이상(전체 20시간 이상, 노인 목용봉사 시 2시간 인정)\n- SW 가치확산 노인 봉사 포함(기초 컴퓨터 활용법 스마트폰 사용법 교육 등)\n- 인증방법: VMS, 1365자원봉사센터(봉상활동 인증 확인서, 노인 봉사만 해당)을 추천\n- 17학번 이후는 "사회 봉사" 과목 이수로 대체(30시간 이상 자원 봉사)</string>>
-    <string name="englishInfo">  1. TOEIC 700점 이상 (* 모의토익으로 대체 가능)\n  2. 지정 영어문법책 연습문제 2000개 내외 문제풀이\n [Raymond Murphy, Grammar in Use Intermediate, 3Rd Edition, Cambridge Univ. Press, 2009 [개정 2016] 영문판]\n  * 인증방법 : 지정 교재 학습 후 제출</string>>
+    <string name="action_insert">새 과목 추가하기</string>
+    <string name="action_delete">기존 과목 삭제하기</string>
+    <string name="info1"> - 노인대상 봉사 10회 이상\n   (전체 20시간 이상, 노인 목용봉사 : 2시간 인정)</string>
+    <string name="info2"> - SW 가치확산 노인 봉사 포함\n   (기초 컴퓨터 활용법, 스마트폰 사용법 교육 등)</string>
+    <string name="info3"> - 인증방법: VMS, 1365자원봉사센터 추천\n   (봉상활동 인증 확인서, 노인 봉사만 해당)</string>
+    <string name="info4"> - 17학번 이후는 "사회 봉사" 과목 이수로 대체\n   (30시간 이상 자원 봉사)</string>
+    <string name="englishInfo1"> 1. TOEIC 700점 이상\n  (--> *모의토익으로 대체 가능!)</string>
+    <string name="englishInfo2"> 2. 지정 영어문법책 연습문제 2000개 내외 문제풀이\n
+[Raymond Murphy, Grammar in Use Intermediate, 3Rd Edition, 2009 (개정 2016)]</string>
 </resources>

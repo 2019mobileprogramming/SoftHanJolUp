@@ -14,8 +14,6 @@ public class course {
         //id, year, semester, courseName, credit, index, done
 
 
-
-
         //1학년 1학기
         db.execSQL("INSERT INTO DB_Course VALUES(0,1, 1,'인성세미나',1,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(1,1, 1,'Practical English1',1,1, 0);");
