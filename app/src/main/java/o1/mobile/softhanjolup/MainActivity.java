@@ -1,7 +1,9 @@
 package o1.mobile.softhanjolup;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -35,8 +37,7 @@ EditText titleView, contentView;
     int calculatedCredit=0;
     TextView creditView;
     View headView;
-    TextView creditInfo1;
-    TextView creditInfo2;
+    TextView creditInfo1, creditInfo2;
 
     final static String dbName = "SHJU_DB.db";
     final static int dbVersion = 3;
@@ -65,14 +66,7 @@ EditText titleView, contentView;
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        /*Intent intent = getIntent();
-        if(intent != null){
-            Bundle bundle = intent.getExtras();
-            calculatedCredit = bundle.getInt("credit");
-        }
-        else{*/
-            calculatedCredit =calCredit();;
-      // }
+        calculatedCredit =calCredit();
 
         headView = navigationView.getHeaderView(0);
         creditView = headView.findViewById(R.id.nav_creditView);
@@ -83,15 +77,13 @@ EditText titleView, contentView;
         creditText =  tempCredit + "학점 남았어요!";
         creditInfo2.setText(creditText);
 
+        TextView userName = headView.findViewById(R.id.nav_user_name);
+        SharedPreferences prefName = getSharedPreferences("prefName", Context.MODE_PRIVATE);
+        String Name = prefName.getString("userName","name");
+        userName.setText(Name);
 
 
-    }
 
-    public void updateCredit(){
-        creditView = headView.findViewById(R.id.nav_creditView);
-        int tempC = calCredit();
-        String creditText = getString(R.string.nav_credit1) + tempC + getString(R.string.nav_credit2);
-        creditView.setText(creditText);
     }
 
     Cursor cursor;
@@ -121,35 +113,12 @@ EditText titleView, contentView;
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {  //메뉴 ...버튼
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.option_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
-        //Fragment myFragment = null;
-        //Class fragmentClass;
 
         if (id == R.id.SideHomee) {//홈 창으로 이동
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -160,13 +129,9 @@ EditText titleView, contentView;
             Intent intent = new Intent(getApplicationContext(), a_course_main_j.class);
             startActivity(intent);
 
-
-            //fragmentClass = f_course_main_j.class;
-
         }  else if (id == R.id.SideCourse) {//교육과정 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_course_main_j.class);
             startActivity(intent);
-            //fragmentClass = f_course_main_j.class;
 
 
         } else if (id == R.id.SideVolun) {//봉사활동 창으로 이동
@@ -185,9 +150,6 @@ EditText titleView, contentView;
 
         }
         finish();
-
-       // FragmentManager fragmentManager = getSupportFragmentManager();
-       // fragmentManager.beginTransaction().replace(R.id.flcontent, myFragment).commit();//화면 바꾸기
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

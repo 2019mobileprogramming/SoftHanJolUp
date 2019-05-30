@@ -26,6 +26,7 @@ import android.widget.Toast;
 import o1.mobile.softhanjolup.DB.course_DBAdapter;
 import o1.mobile.softhanjolup.DB.course_DBAdapter_2;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
+import o1.mobile.softhanjolup.DB.inri_DBHelper;
 import o1.mobile.softhanjolup.R;
 
 
@@ -72,16 +73,12 @@ public class f_course_1st_j extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Cursor se1 = se1Index(position);
-                //String str = se1.getString(se1.getColumnIndex("courseName"));
-                //Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
             }
         });
         list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Cursor se1 = se2Index(position);
-                //String str = se1.getString(se1.getColumnIndex("courseName"));
-                //Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -91,7 +88,6 @@ public class f_course_1st_j extends Fragment {
             public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id){
                 Cursor se1 = se1Index(position);
                 String str = se1.getString(se1.getColumnIndex("courseName"));
-                //Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
 
                 RelativeLayout tempRel = (RelativeLayout)v;
                 if(se1.getInt(se1.getColumnIndex("done")) == 0)
@@ -128,9 +124,6 @@ public class f_course_1st_j extends Fragment {
                 return true;
             }
         });
-
-
-
         return rootView;
     }
 
@@ -167,6 +160,9 @@ public class f_course_1st_j extends Fragment {
 
         cursor = db.rawQuery(sql, null);
         if (cursor.getCount() > 0) {
+
+
+
             getActivity().startManagingCursor(cursor);
             course_DBAdapter dbAdapter = new course_DBAdapter(getActivity(), cursor);
             list.setAdapter(dbAdapter);

@@ -12,23 +12,106 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="트랙"/>
+            android:text="인성과 리더십"
+            android:textSize="25sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <TableLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="1학년 1학기"
+                android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/inri_101_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="1학년 2학기"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/inri_102_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="창의와 사고"
+            android:textSize="25sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+<!--
         <ListView
+            android:layout_marginLeft="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/other_inriList">
         </ListView>
-
+        -->
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="트랙"
+            android:textSize="25sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+        <!--
+        <ListView
+            android:layout_marginLeft="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="교양"/>
+            android:id="@+id/other_inriList">
+        </ListView>
+        -->
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
         <Button
             android:id="@+id/other_confirmBtn"
             android:layout_width="wrap_content"
@@ -36,15 +119,6 @@
             android:text="확인"/>
 
     </LinearLayout>
-
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_menu" />
 
 
 </android.support.v4.widget.DrawerLayout>
