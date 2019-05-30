@@ -108,7 +108,7 @@ public class a_book_main_j extends AppCompatActivity
         //Fragment myFragment = null;
         //Class fragmentClass;
 
-        if (id == R.id.SideHome) {//홈 창으로 이동
+        if (id == R.id.SideHomee) {//홈 창으로 이동
             //fragmentClass = f_home_main_j.class;
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);

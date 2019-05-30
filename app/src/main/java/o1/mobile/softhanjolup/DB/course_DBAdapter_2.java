@@ -2,6 +2,8 @@ package o1.mobile.softhanjolup.DB;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,13 @@ import android.widget.TextView;
 import o1.mobile.softhanjolup.R;
 
 public class course_DBAdapter_2 extends CursorAdapter {
+
+    inri_DBHelper inriDBHelper;
+    SQLiteDatabase inriDB;
+
+    final static String inriDBName = "INRI.db";
+    final static int dbVersion = 3;
+
     public course_DBAdapter_2(Context context, Cursor c){
         super(context, c);
     }
@@ -36,6 +45,25 @@ public class course_DBAdapter_2 extends CursorAdapter {
         }
         else{
             listParent.setBackgroundColor(context.getResources().getColor(R.color.doneBackground));
+        }
+
+        if(cursor.getString(cursor.getColumnIndex("courseName")).equals("인성과 리더십")){
+            Log.d("inri102", "인성과 리더십");
+            inriDBHelper = new inri_DBHelper(context, inriDBName, null, dbVersion);
+            inriDB = inriDBHelper.getReadableDatabase();
+
+            String sql102 = "SELECT * FROM inri_DB";
+            Cursor cursor102 = inriDB.rawQuery(sql102, null);
+
+            cursor102.moveToFirst();
+            for(int i=0; i<cursor102.getCount(); i++){
+                if(cursor102.getInt(cursor102.getColumnIndex("semester")) == 102){
+                    String inriName101 = cursor102.getString(cursor102.getColumnIndex("courseName"));
+                    courseName2.setText(inriName101);
+
+                }
+                cursor102.moveToNext();
+            }
         }
     }
 

@@ -2,7 +2,9 @@ package o1.mobile.softhanjolup.Course;
 
 import android.app.Dialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -77,6 +79,11 @@ public class a_course_main_j extends AppCompatActivity
         calculatedCredit = calCredit();
         String creditText = getString(R.string.nav_credit1) + calculatedCredit + getString(R.string.nav_credit2);
         creditView.setText(creditText);
+
+        TextView userName = headView.findViewById(R.id.nav_user_name);
+        SharedPreferences prefName = getSharedPreferences("prefName", Context.MODE_PRIVATE);
+        String Name = prefName.getString("userName","name");
+        userName.setText(Name);
 
         {//tab 생성
             fragment1 = new f_course_1st_j();
@@ -190,7 +197,7 @@ public class a_course_main_j extends AppCompatActivity
         if (id == R.id.course_action_add) {
             dialogAdd = new Dialog(a_course_main_j.this);
 
-            dialogAdd.setContentView(R.layout.course_new_record_x);
+            dialogAdd.setContentView(R.layout.course_add_record_x);
 
              course_new_year = dialogAdd.findViewById(R.id.course_new_year);
              course_new_semester = dialogAdd.findViewById(R.id.course_new_semester);
@@ -307,9 +314,9 @@ public class a_course_main_j extends AppCompatActivity
 
         if (id == R.id.SideHomee) {//홈 창으로 이동
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putInt("credit",calculatedCredit);
-            intent.putExtras(bundle);
+            startActivity(intent);
+        } else if (id == R.id.SideCourse) {//교육과정 창으로 이동
+            Intent intent = new Intent(getApplicationContext(), a_course_main_j.class);
             startActivity(intent);
         }  else if (id == R.id.SideCourse) {//교육과정 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_course_main_j.class);

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="학년" />
+
+    <Spinner
+        android:id="@+id/course_new_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/newYear" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="학기" />
+
+    <Spinner
+        android:id="@+id/course_new_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/newSemester" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="과목 이름" />
+
+    <EditText
+        android:id="@+id/course_new_courseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="학점" />
+
+    <EditText
+        android:id="@+id/course_new_credit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/course_new_addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/tabCourseBackground"
+        android:text="추가하기" />
+</LinearLayout>
