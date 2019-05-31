@@ -25,6 +25,7 @@ import o1.mobile.softhanjolup.Course.a_course_main_j;
 import o1.mobile.softhanjolup.DB.course_DBAdapter;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
 import o1.mobile.softhanjolup.English.a_english_main_j;
+import o1.mobile.softhanjolup.Setting.InitialActivity;
 import o1.mobile.softhanjolup.Volunteer.a_volun_main_j;
 
 public class MainActivity extends AppCompatActivity
@@ -123,31 +124,24 @@ EditText titleView, contentView;
         if (id == R.id.SideHomee) {//홈 창으로 이동
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
-
-
         } else if (id == R.id.SideCourse) {//교육과정 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_course_main_j.class);
             startActivity(intent);
-
         }  else if (id == R.id.SideCourse) {//교육과정 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_course_main_j.class);
             startActivity(intent);
-
-
         } else if (id == R.id.SideVolun) {//봉사활동 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_volun_main_j.class);
             startActivity(intent);
-
-
         } else if (id == R.id.SideTOEIC) {//토익 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_english_main_j.class);
             startActivity(intent);
-
-
         } else if (id == R.id.SideBook) {//독후감 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_book_main_j.class);
             startActivity(intent);
-
+        } else if(id == R.id.SideSetting){
+            Intent intent = new Intent(getApplicationContext(), InitialActivity.class);
+            startActivity(intent);
         }
         finish();
 
