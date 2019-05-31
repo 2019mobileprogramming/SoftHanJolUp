@@ -26,7 +26,6 @@ import android.widget.Toast;
 import o1.mobile.softhanjolup.DB.course_DBAdapter;
 import o1.mobile.softhanjolup.DB.course_DBAdapter_2;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
-import o1.mobile.softhanjolup.DB.inri_DBHelper;
 import o1.mobile.softhanjolup.R;
 
 

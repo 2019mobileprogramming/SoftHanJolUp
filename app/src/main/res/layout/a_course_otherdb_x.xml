@@ -30,7 +30,7 @@
             android:layout_height="wrap_content">
             <TableRow>
                 <TextView
-                android:layout_width="80dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="1학년 1학기"
                 android:textSize="20sp"/>
@@ -42,7 +42,7 @@
             </TableRow>
             <TableRow>
                 <TextView
-                    android:layout_width="80dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="1학년 2학기"
                     android:textSize="20sp"/>
@@ -53,17 +53,6 @@
                     android:layout_width="match_parent"/>
             </TableRow>
         </TableLayout>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -82,14 +71,36 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="5dp"/>
-<!--
-        <ListView
-            android:layout_marginLeft="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/other_inriList">
-        </ListView>
-        -->
+
+        <TableLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="1학년 1학기"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/changsa_101_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="1학년 2학기"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/changsa_102_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+        </TableLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -99,20 +110,65 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="5dp"/>
-        <!--
-        <ListView
-            android:layout_marginLeft="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/other_inriList">
-        </ListView>
-        -->
-
+        <TableLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="트랙1"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/track_1_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="트랙2"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/track_2_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="트랙2"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/track_3_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="트랙4"
+                    android:textSize="20sp"/>
+                <Spinner
+                    android:id="@+id/track_4_spinner"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </TableRow>
+        </TableLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"/>
         <Button
+            android:background="@color/tabCourseBackground"
             android:id="@+id/other_confirmBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

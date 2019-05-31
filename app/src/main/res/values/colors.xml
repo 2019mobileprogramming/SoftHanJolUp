@@ -10,6 +10,10 @@
     <color name="tabCourseSelectedTextColor">#F1EDF7</color>
 
 
+    <color name="tableTitleText">#970AC5</color>
+    <color name="tablesubTitleText">#A42DCA</color>
+    <color name="tableTitleBackground">#F7F2F8</color>
+
     <color name="doneBackground">#F2E9F5</color>
     <color name="nodoneBackground">#FFFFFF</color>
     <color name="courseBackground">#FFFFFF</color>

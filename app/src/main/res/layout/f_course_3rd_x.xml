@@ -4,62 +4,65 @@
     android:layout_height="match_parent"
     android:background="@color/courseBackground"
     >
-
     <TableLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TableRow>
-
+        <TableRow
+            android:background="@color/tableTitleBackground"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp">
             <TextView
-                android:id="@+id/year"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="year"
-                android:textSize="10sp" />
-            <TextView
-                android:id="@+id/semester"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="semester"
-                android:textSize="10sp" />
-            <TextView
+                android:textColor="@color/tableTitleText"
                 android:id="@+id/courseName"
-                android:layout_width="250dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="courseName"
-                android:textSize="10sp" />
+                android:textSize="22sp" />
             <TextView
+                android:textColor="@color/tableTitleText"
                 android:id="@+id/credit"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="credit"
-                android:textSize="10sp" />
+                android:textSize="22sp" />
             <TextView
+                android:textColor="@color/tableTitleText"
                 android:id="@+id/index_course"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:text="index"
-                android:textSize="10sp" />
+                android:text="이수구분"
+                android:textSize="22sp" />
         </TableRow>
     </TableLayout>
     <TextView
+        android:textSize="23sp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/tablesubTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1학기"/>
 
     <ListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/third_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>.
     <TextView
+        android:textSize="23sp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/tablesubTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2학기"/>
 
     <ListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/third_2_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
