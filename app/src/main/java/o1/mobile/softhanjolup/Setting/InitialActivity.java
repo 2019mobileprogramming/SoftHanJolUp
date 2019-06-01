@@ -23,10 +23,11 @@ public class InitialActivity extends AppCompatActivity {
         name_input = findViewById(R.id.initial_name_input);
         startBtn = findViewById(R.id.initial_startBtn);
 
-        SharedPreferences pref = getSharedPreferences("initFlag", Context.MODE_PRIVATE);
-        boolean first = pref.getBoolean("isFirst",false);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        int isFirst = bundle.getInt("isFirst");
 
-        if(first == false){
+        if(isFirst == 0){
             startBtn.setText("시작하기");
         }
         else{

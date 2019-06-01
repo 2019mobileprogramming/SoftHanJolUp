@@ -70,11 +70,11 @@ public class f_course_3rd_j extends Fragment {
                 if(se1.getInt(se1.getColumnIndex("done")) == 0)
                 {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.doneBackground));
-                    updateDone(str,1);
+                    updateDone(str,1, 1);
                     ((a_course_main_j)getActivity()).updateCredit();
                 } else {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.nodoneBackground));
-                    updateDone(str,0);
+                    updateDone(str,0, 1);
                     ((a_course_main_j)getActivity()).updateCredit();
                 }
                 return true;
@@ -92,11 +92,11 @@ public class f_course_3rd_j extends Fragment {
                 if(se.getInt(se.getColumnIndex("done")) == 0)
                 {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.doneBackground));
-                    updateDone(str,1);
+                    updateDone(str,1, 2);
                     ((a_course_main_j)getActivity()).updateCredit();
                 } else {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.nodoneBackground));
-                    updateDone(str,0);
+                    updateDone(str,0, 2);
                     ((a_course_main_j)getActivity()).updateCredit();
                 }
                 return true;
@@ -104,11 +104,11 @@ public class f_course_3rd_j extends Fragment {
         });
         return rootView;
     }
-    public void updateDone(String name, int done){
+    public void updateDone(String name, int done, int semester){
         db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("done",done);
-        db.update("DB_Course", values, "courseName = ?", new String[]{name});
+        db.update("DB_Course", values, "courseName = ? and semester = ?", new String[]{name, Integer.toString(semester)});
     }
     private Cursor se1Index(int positon) {
         db = dbHelper.getWritableDatabase();

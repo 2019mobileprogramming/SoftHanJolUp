@@ -11,32 +11,39 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import javax.xml.transform.Templates;
+
+import o1.mobile.softhanjolup.DB.Book_memo_DBHelper;
 import o1.mobile.softhanjolup.DB.DeptBook_DBAdapter;
 import o1.mobile.softhanjolup.DB.DeptBook_DBHelper;
-import o1.mobile.softhanjolup.MainActivity;
 import o1.mobile.softhanjolup.R;
 
-public class f_book_dept_j extends Fragment {
+
+public class f_book_memo_j extends Fragment {
 
     ListView list;
-    DeptBook_DBHelper dbHelper;
-    SQLiteDatabase db;
+    Book_memo_DBHelper book_memo_dbHelper;
+    SQLiteDatabase memoDB;
     String sql;
     Cursor cursor;
 
-    final static String dbName = "DeptBook.db";
+    final static String memoDBName = "MEMO.db";
     final static int dbVersion = 2;
+
+    TextView memoNull;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
 
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.f_book_dept_x, container, false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.f_book_memo_x, container, false);
 
-        list = (ListView)rootView.findViewById(R.id.book_list);
-        dbHelper = new DeptBook_DBHelper(getActivity(), dbName, null, dbVersion);
+        list = (ListView)rootView.findViewById(R.id.book_memo_list);
+        memoNull = rootView.findViewById(R.id.book_memo_null);
+        book_memo_dbHelper = new Book_memo_DBHelper(getActivity(), memoDBName, null, dbVersion);
 
         selectDB();
 
@@ -71,14 +78,18 @@ public class f_book_dept_j extends Fragment {
     }
 
     private void selectDB(){
-        db = dbHelper.getWritableDatabase();
-        sql = "SELECT * FROM DeptBook;";
+        memoDB = book_memo_dbHelper.getWritableDatabase();
+        sql = "SELECT * FROM memoBook;";
 
-        cursor = db.rawQuery(sql, null);
+        cursor = memoDB.rawQuery(sql, null);
+
         if(cursor.getCount() > 0){
             getActivity().startManagingCursor(cursor);
             DeptBook_DBAdapter dbAdapter = new DeptBook_DBAdapter(getActivity(), cursor);
             list.setAdapter(dbAdapter);
+        }
+        else{
+            memoNull.setVisibility(View.VISIBLE);
         }
     }
 

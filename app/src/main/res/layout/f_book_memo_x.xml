@@ -38,11 +38,19 @@
 
     <ListView
         android:layout_margin="12sp"
-        android:id="@+id/book_list"
+        android:id="@+id/book_memo_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="2sp"
         android:divider="@color/tabCourseBackground"
         android:dividerHeight="1sp"/>
+    <TextView
+        android:id="@+id/book_memo_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아직 작성된 독후감이 없어요!"
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
+
 
 </LinearLayout>

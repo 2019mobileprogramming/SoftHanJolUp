@@ -16,14 +16,14 @@
                 android:id="@+id/courseName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="courseName"
+                android:text="과목명"
                 android:textSize="22sp" />
             <TextView
                 android:textColor="@color/tableTitleText"
                 android:id="@+id/credit"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="credit"
+                android:text="학점"
                 android:textSize="22sp" />
             <TextView
                 android:textColor="@color/tableTitleText"

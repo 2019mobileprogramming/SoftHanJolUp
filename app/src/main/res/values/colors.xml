@@ -17,4 +17,10 @@
     <color name="doneBackground">#F2E9F5</color>
     <color name="nodoneBackground">#FFFFFF</color>
     <color name="courseBackground">#FFFFFF</color>
+
+
+    <color name="bookMemoBackground">#E6E2E7</color>
+    <color name="bookMemoContentBackground">#FAF7FC</color>
+    <color name="bookMemoEditBackground">#FFFFFF</color>
+    <color name="bookMemoText">#2E003A</color>
 </resources>

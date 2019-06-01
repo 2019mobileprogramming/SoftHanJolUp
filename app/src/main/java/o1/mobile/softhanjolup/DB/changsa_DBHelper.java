@@ -20,7 +20,7 @@ public class changsa_DBHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO changsa_DB VALUES(1, '논리적 사고', 0);");
         db.execSQL("INSERT INTO changsa_DB VALUES(2, '사고와 표현', 0);");
         db.execSQL("INSERT INTO changsa_DB VALUES(3, '역사와 상상력', 0);");
-        db.execSQL("INSERT INTO changsa_DB VALUES(4, '창의적 고전읽기', 0);");
+        db.execSQL("INSERT INTO changsa_DB VALUES(4, '창의적 사고', 0);");
         db.execSQL("INSERT INTO changsa_DB VALUES(5, '창조와 몰입', 0);");
 
     }

@@ -87,21 +87,23 @@ public class f_course_1st_j extends Fragment {
             public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id){
                 Cursor se1 = se1Index(position);
                 String str = se1.getString(se1.getColumnIndex("courseName"));
+                //Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
 
                 RelativeLayout tempRel = (RelativeLayout)v;
                 if(se1.getInt(se1.getColumnIndex("done")) == 0)
                 {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.doneBackground));
-                    updateDone(str,1);
+                    updateDone(str,1, 1);
                     ((a_course_main_j)getActivity()).updateCredit();
                 } else {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.nodoneBackground));
-                    updateDone(str,0);
+                    updateDone(str,0, 1);
                     ((a_course_main_j)getActivity()).updateCredit();
                 }
                 return true;
             }
         });
+
         list2.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id){
@@ -113,11 +115,11 @@ public class f_course_1st_j extends Fragment {
                 if(se.getInt(se.getColumnIndex("done")) == 0)
                 {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.doneBackground));
-                    updateDone(str,1);
+                    updateDone(str,1, 2);
                     ((a_course_main_j)getActivity()).updateCredit();
                 } else {
                     tempRel.setBackgroundColor(getResources().getColor(R.color.nodoneBackground));
-                    updateDone(str,0);
+                    updateDone(str,0, 2);
                     ((a_course_main_j)getActivity()).updateCredit();
                 }
                 return true;
@@ -129,11 +131,11 @@ public class f_course_1st_j extends Fragment {
 
 
 
-    public void updateDone(String name, int done){
+    public void updateDone(String name, int done, int semester){
         db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("done",done);
-        db.update("DB_Course", values, "courseName = ?", new String[]{name});
+        db.update("DB_Course", values, "courseName = ? and semester = ?", new String[]{name, Integer.toString(semester)});
     }
 
     private Cursor se1Index(int positon) {

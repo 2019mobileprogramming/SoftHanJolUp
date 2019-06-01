@@ -35,6 +35,7 @@
                     app:tabGravity="fill"
                     app:tabTextColor="@color/tabCourseTextColor"
                     app:tabSelectedTextColor="@color/tabCourseSelectedTextColor"
+                    android:background="@color/tabCourseBackground"
                     />
 
                 <FrameLayout
