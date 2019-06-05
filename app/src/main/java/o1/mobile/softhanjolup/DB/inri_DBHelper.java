@@ -16,9 +16,10 @@ public class inri_DBHelper extends SQLiteOpenHelper {
 
         db.execSQL(sql);
 
-        db.execSQL("INSERT INTO inri_DB VALUES(0, '가천 리더십', 0);");
-        db.execSQL("INSERT INTO inri_DB VALUES(1, '생명과 나눔', 0);");
-        db.execSQL("INSERT INTO inri_DB VALUES(2, '한국사', 0);");
+        db.execSQL("INSERT INTO inri_DB VALUES(0, '인성과 리더십', 0);");
+        db.execSQL("INSERT INTO inri_DB VALUES(1, '가천 리더십', 0);");
+        db.execSQL("INSERT INTO inri_DB VALUES(2, '생명과 나눔', 0);");
+        db.execSQL("INSERT INTO inri_DB VALUES(3, '한국사', 0);");
 
     }
 

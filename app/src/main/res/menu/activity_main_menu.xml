@@ -30,4 +30,16 @@
             android:icon="@drawable/ic_class_black_24dp"
             android:title="도서(독후감)" />
     </group>
+    <item android:title="기타">
+        <menu>
+            <item
+                android:id="@+id/SideHow"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="사용방법" />
+            <item
+                android:id="@+id/SideSetting"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="이름설정" />
+        </menu>
+    </item>
 </menu>

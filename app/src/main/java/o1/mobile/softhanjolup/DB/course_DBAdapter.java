@@ -2,6 +2,8 @@ package o1.mobile.softhanjolup.DB;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,28 +11,135 @@ import android.widget.CursorAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import o1.mobile.softhanjolup.R;
 
 public class course_DBAdapter extends CursorAdapter {
+
+    inri_DBHelper inriDBHelper;
+    changsa_DBHelper changsa_dbHelper;
+    track_DBHelper track_dbHelper;
+    SQLiteDatabase inriDB, ChangsaDB, trackDB;
+
+    final static String inriDBName = "INRI.db";
+    final static String changsaDBName = "CHANGSA.db";
+    final static String trackDBName = "TRACK.db";
+    final static int dbVersion = 3;
+
+
     public course_DBAdapter(Context context, Cursor c){
         super(context, c);
     }
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        final TextView year = view.findViewById(R.id.year);
-        final TextView semester = view.findViewById(R.id.semester);
         final TextView courseName = view.findViewById(R.id.courseName);
         final TextView credit = view.findViewById(R.id.credit);
         final TextView index_course = view.findViewById(R.id.index_course);
         final RelativeLayout listParent = view.findViewById(R.id.courseListParent);
 
-        year.setText(cursor.getString(cursor.getColumnIndex("year")));
-        semester.setText(cursor.getString(cursor.getColumnIndex("semester")));
         courseName.setText(cursor.getString(cursor.getColumnIndex("courseName")));
         credit.setText(cursor.getString(cursor.getColumnIndex("credit")));
         index_course.setText(cursor.getString(cursor.getColumnIndex("index_course")));
 
+        checkDone(cursor, listParent, context);
+        checkInri(cursor, context, courseName);
+        checkChangSa(cursor, context, courseName);
+        checkIndex(index_course);
+        checkTrack(cursor, context, courseName);
+
+    }
+
+    public void checkIndex(TextView index_course){
+        if(index_course.getText().toString().equals("1")){
+            index_course.setText("학교필수교양");
+        } else if(index_course.getText().toString().equals("2")){
+            index_course.setText("학과필수교양");
+        } else if(index_course.getText().toString().equals("3")){
+            index_course.setText("필수일반선택");
+        } else if(index_course.getText().toString().equals("4")){
+            index_course.setText("트랙");
+        } else if(index_course.getText().toString().equals("5")){
+            index_course.setText("전공필수");
+        } else if(index_course.getText().toString().equals("6")){
+            index_course.setText("전공선택");
+        } else if(index_course.getText().toString().equals("7")){
+            index_course.setText("일반선택");
+        }
+    }
+
+    public void checkInri(Cursor cursor, Context context, TextView courseName){
+        if(cursor.getString(cursor.getColumnIndex("courseName")).equals("인성과 리더십")){
+            inriDBHelper = new inri_DBHelper(context, inriDBName, null, dbVersion);
+            inriDB = inriDBHelper.getReadableDatabase();
+
+            String sql101 = "SELECT * FROM inri_DB";
+            Cursor cursor101 = inriDB.rawQuery(sql101, null);
+
+            cursor101.moveToFirst();
+            for(int i=0; i<cursor101.getCount(); i++){
+                if(cursor101.getInt(cursor101.getColumnIndex("semester")) == 101){
+                    String inriName101 = cursor101.getString(cursor101.getColumnIndex("courseName"));
+                    courseName.setText(inriName101);
+
+                }
+                cursor101.moveToNext();
+            }
+        }
+    }
+
+    public void checkChangSa(Cursor cursor, Context context, TextView courseName){
+        if(cursor.getString(cursor.getColumnIndex("courseName")).equals("창의와 사고")){
+            changsa_dbHelper = new changsa_DBHelper(context, changsaDBName, null, dbVersion);
+            ChangsaDB = changsa_dbHelper.getReadableDatabase();
+
+            String sql101 = "SELECT * FROM changsa_DB";
+            Cursor cursor101 = ChangsaDB.rawQuery(sql101, null);
+
+            cursor101.moveToFirst();
+            for(int i=0; i<cursor101.getCount(); i++){
+                if(cursor101.getInt(cursor101.getColumnIndex("semester")) == 101){
+                    String changsaName101 = cursor101.getString(cursor101.getColumnIndex("courseName"));
+                    courseName.setText(changsaName101);
+                }
+                cursor101.moveToNext();
+            }
+        }
+    }
+
+    public void checkTrack(Cursor cursor, Context context, TextView courseName){
+        track_dbHelper = new track_DBHelper(context, trackDBName, null, dbVersion);
+        trackDB = track_dbHelper.getReadableDatabase();
+        if(cursor.getString(cursor.getColumnIndex("courseName")).equals("트랙1")){
+            String sql = "SELECT * FROM track_DB where semester is 1";
+            cursor = trackDB.rawQuery(sql, null);
+
+            cursor.moveToFirst();
+            for(int i=0; i<cursor.getCount(); i++){
+                if(cursor.getInt(cursor.getColumnIndex("checked")) == 1){
+                    String trackName = cursor.getString(cursor.getColumnIndex("courseName"));
+                    courseName.setText(trackName);
+                }
+                cursor.moveToNext();
+            }
+        }
+        else if(cursor.getString(cursor.getColumnIndex("courseName")).equals("트랙3")){
+            String sql = "SELECT * FROM track_DB where semester is 3";
+            cursor = trackDB.rawQuery(sql, null);
+
+            cursor.moveToFirst();
+            for(int i=0; i<cursor.getCount(); i++){
+                if(cursor.getInt(cursor.getColumnIndex("checked")) == 1){
+                    String trackName = cursor.getString(cursor.getColumnIndex("courseName"));
+                    courseName.setText(trackName);
+                }
+                cursor.moveToNext();
+            }
+        }
+    }
+
+    public void checkDone(Cursor cursor, RelativeLayout listParent, Context context){
         if(cursor.getInt(cursor.getColumnIndex("done")) == 0){
             listParent.setBackgroundColor(context.getResources().getColor(R.color.nodoneBackground));
         }
