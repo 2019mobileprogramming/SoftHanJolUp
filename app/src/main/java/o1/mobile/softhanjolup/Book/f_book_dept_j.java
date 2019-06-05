@@ -1,5 +1,6 @@
 package o1.mobile.softhanjolup.Book;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -14,9 +15,8 @@ import android.widget.Toast;
 
 import o1.mobile.softhanjolup.DB.DeptBook_DBAdapter;
 import o1.mobile.softhanjolup.DB.DeptBook_DBHelper;
+import o1.mobile.softhanjolup.MainActivity;
 import o1.mobile.softhanjolup.R;
-
-
 
 public class f_book_dept_j extends Fragment {
 
@@ -40,12 +40,22 @@ public class f_book_dept_j extends Fragment {
 
         selectDB();
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
             @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id){
                 cursor.moveToPosition(position);
-                String str = cursor.getString(cursor.getColumnIndex("title"));
-                Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
+                String bookName = cursor.getString(cursor.getColumnIndex("title"));
+                String bookAuthor = cursor.getString(cursor.getColumnIndex("author"));
+
+                Intent intent = new Intent(getActivity(), a_book_memo_j.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("bookName", bookName);
+                bundle.putString("bookAuthor", bookAuthor);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+                return true;
             }
         });
 

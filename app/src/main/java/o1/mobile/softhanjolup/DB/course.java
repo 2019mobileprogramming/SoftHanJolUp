@@ -19,7 +19,7 @@ public class course {
         db.execSQL("INSERT INTO DB_Course VALUES(1,1, 1,'Practical English1',1,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(2,1, 1,'인성과 리더십',2,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(3,1, 1,'창의와 사고',2,1, 0);");
-        db.execSQL("INSERT INTO DB_Course VALUES(4,1, 1,'미술 감상과 비평',2,3, 0);");
+        db.execSQL("INSERT INTO DB_Course VALUES(4,1, 1,'미술 감상과 비평',2,7, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(5,1, 1,'컴퓨터 프로그래밍',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(6,1, 1,'웹 프로그래밍',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(7,1, 1,'이산수학',3,5, 0);");
@@ -44,14 +44,14 @@ public class course {
         db.execSQL("INSERT INTO DB_Course VALUES(24,2, 1,'객체지향 프로그래밍',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(25,2, 1,'운영체제',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(26,2, 1,'경제학개론',2,6, 0);");
-        db.execSQL("INSERT INTO DB_Course VALUES(27,2, 1,'에듀에코세미나',1,2, 0);");
+        db.execSQL("INSERT INTO DB_Course VALUES(27,2, 1,'에듀에코세미나',1,6, 0);");
 
 
         //2학년 2학기
         db.execSQL("INSERT INTO DB_Course VALUES(31,2, 2,'Practical English4',1,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(32,2, 2,'사회봉사',0,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(33,2, 2,'세계와 문화',2,2, 0);");
-        db.execSQL("INSERT INTO DB_Course VALUES(34,2, 2,'사회와 역사',2,3, 0);");
+        db.execSQL("INSERT INTO DB_Course VALUES(34,2, 2,'사회와 역사',2,2, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(35,2, 2,'네트워크',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(36,2, 2,'알고리즘',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(37,2, 2,'데이터베이스',3,5, 0);");
@@ -59,7 +59,7 @@ public class course {
 
 
         //3학년 1학기
-        db.execSQL("INSERT INTO DB_Course VALUES(41,3,1,'사회와 역사',2,3, 0);");
+        db.execSQL("INSERT INTO DB_Course VALUES(41,3,1,'사회와 역사',2,2, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(42,3,1,'모바일 프로그래밍',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(43,3,1,'졸업작품1',1,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(44,3,1,'경영학원론',3,5, 0);");
