@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/a_course_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="@color/bookMemoBackground">
 
 
     <LinearLayout
@@ -15,104 +15,195 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <TextView
+        <LinearLayout
+            android:background="@color/bookMemoContentBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="인성과 리더십"
-            android:textSize="25sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"/>
-
-        <TableLayout
-            android:layout_marginLeft="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TableRow>
-                <TextView
-                android:layout_width="80dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/tableTitleText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1학년 1학기"
-                android:textSize="20sp"/>
-                <Spinner
-                    android:id="@+id/inri_101_spinner"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:text="1학년 2학기"
-                    android:textSize="20sp"/>
-                <Spinner
-                    android:id="@+id/inri_102_spinner"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"/>
-            </TableRow>
-        </TableLayout>
+                android:text="인성과 리더십"
+                android:textSize="25sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"/>
 
+            <TableLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="1학년 1학기"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/inri_101_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="1학년 2학기"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/inri_102_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+            </TableLayout>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="창의와 사고"
-            android:textSize="25sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"/>
-<!--
-        <ListView
-            android:layout_marginLeft="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/other_inriList">
-        </ListView>
-        -->
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="트랙"
-            android:textSize="25sp"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"/>
-        <!--
-        <ListView
-            android:layout_marginLeft="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/other_inriList">
-        </ListView>
-        -->
+        </LinearLayout>
 
 
         <View
             android:layout_width="match_parent"
             android:layout_height="10dp"/>
+
+
+        <LinearLayout
+            android:background="@color/bookMemoContentBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/tableTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="창의와 사고"
+                android:textSize="25sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"/>
+
+            <TableLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="1학년 1학기"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/changsa_101_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="1학년 2학기"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/changsa_102_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:background="@color/bookMemoContentBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/tableTitleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="트랙"
+                android:textSize="25sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"/>
+            <TableLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="트랙1"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/track_1_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="트랙2"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/track_2_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="트랙2"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/track_3_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="2dp">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="트랙4"
+                        android:textSize="20sp"/>
+                    <Spinner
+                        android:id="@+id/track_4_spinner"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
         <Button
+            android:background="@color/buttonColor"
             android:id="@+id/other_confirmBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

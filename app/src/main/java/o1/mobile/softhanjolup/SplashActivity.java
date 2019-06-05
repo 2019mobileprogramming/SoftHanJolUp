@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import o1.mobile.softhanjolup.Init.InitialActivity;
+
 
 public class SplashActivity extends AppCompatActivity {
     @Override
@@ -25,6 +27,9 @@ public class SplashActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     Intent intent = new Intent(SplashActivity.this, InitialActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("isFirst", 0);
+                    intent.putExtras(bundle);
                     startActivity(intent);
                     finish();
                 }

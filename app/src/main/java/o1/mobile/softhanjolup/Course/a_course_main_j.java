@@ -28,8 +28,11 @@ import android.widget.TextView;
 import o1.mobile.softhanjolup.Book.a_book_main_j;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
 import o1.mobile.softhanjolup.English.a_english_main_j;
+import o1.mobile.softhanjolup.Init.info_first_j;
+import o1.mobile.softhanjolup.Init.info_more_j;
 import o1.mobile.softhanjolup.MainActivity;
 import o1.mobile.softhanjolup.R;
+import o1.mobile.softhanjolup.Init.InitialActivity;
 import o1.mobile.softhanjolup.Volunteer.a_volun_main_j;
 
 public class a_course_main_j extends AppCompatActivity
@@ -77,7 +80,7 @@ public class a_course_main_j extends AppCompatActivity
 
         creditView = headView.findViewById(R.id.nav_creditView);
         calculatedCredit = calCredit();
-        String creditText = getString(R.string.nav_credit1) + calculatedCredit + getString(R.string.nav_credit2);
+        String creditText = getString(R.string.nav_credit1) +" "+ calculatedCredit + getString(R.string.nav_credit2);
         creditView.setText(creditText);
 
         TextView userName = headView.findViewById(R.id.nav_user_name);
@@ -93,10 +96,10 @@ public class a_course_main_j extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.containerCourseTab, fragment1).commit();
 
             tabs = (TabLayout) findViewById(R.id.course_tabs);
-            tabs.addTab(tabs.newTab().setText("1st"));
-            tabs.addTab(tabs.newTab().setText("2nd"));
-            tabs.addTab(tabs.newTab().setText("3rd"));
-            tabs.addTab(tabs.newTab().setText("4th"));
+            tabs.addTab(tabs.newTab().setText("1학년"));
+            tabs.addTab(tabs.newTab().setText("2학년"));
+            tabs.addTab(tabs.newTab().setText("3학년"));
+            tabs.addTab(tabs.newTab().setText("4학년"));
 
             tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
@@ -147,10 +150,6 @@ public class a_course_main_j extends AppCompatActivity
         return tempCredit;
     }
 
-
-
-
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.a_course_drawer_layout);
@@ -199,11 +198,11 @@ public class a_course_main_j extends AppCompatActivity
 
             dialogAdd.setContentView(R.layout.course_add_record_x);
 
-             course_new_year = dialogAdd.findViewById(R.id.course_new_year);
-             course_new_semester = dialogAdd.findViewById(R.id.course_new_semester);
-             course_new_courseName = dialogAdd.findViewById(R.id.course_new_courseName);
-             course_new_credit = dialogAdd.findViewById(R.id.course_new_credit);
-             newCourseAddBtn = dialogAdd.findViewById(R.id.course_new_addBtn);
+            course_new_year = dialogAdd.findViewById(R.id.course_new_year);
+            course_new_semester = dialogAdd.findViewById(R.id.course_new_semester);
+            course_new_courseName = dialogAdd.findViewById(R.id.course_new_courseName);
+            course_new_credit = dialogAdd.findViewById(R.id.course_new_credit);
+            newCourseAddBtn = dialogAdd.findViewById(R.id.course_new_addBtn);
 
             course_new_year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -329,6 +328,15 @@ public class a_course_main_j extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.SideBook) {//독후감 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_book_main_j.class);
+            startActivity(intent);
+        } else if (id == R.id.SideHow){
+            Intent intent = new Intent(getApplicationContext(), info_more_j.class);
+            startActivity(intent);
+        } else if(id == R.id.SideSetting){
+            Intent intent = new Intent(getApplicationContext(), InitialActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("isFirst", 1);
+            intent.putExtras(bundle);
             startActivity(intent);
         }
         finish();

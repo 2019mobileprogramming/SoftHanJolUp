@@ -11,8 +11,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="@drawable/back2">
 
     <include
         layout="@layout/app_bar_main"
@@ -23,12 +23,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="20dp">
-
+        android:padding="15dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:text="[ 전체 ]"
             android:layout_gravity="center"
             android:textColor="#ab47bc"
@@ -65,10 +65,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" /> <!-- 공백 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="" />
 
         <TextView
             android:layout_width="match_parent"
@@ -99,11 +95,8 @@
             android:layout_gravity="center"
             android:textColor="#ab47bc"
             android:textStyle="bold"
-            android:textSize="25dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="" />
+            android:textSize="20dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,15 +109,18 @@
                 android:hint="검색어 입력"/>
             <Button
                 android:id="@+id/VMSBtn"
-                android:padding="2dp"
+                android:padding="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VMS검색"
+                android:text="VMS 검색"
                 android:background="@color/tabCourseBackground"/>
 
         </LinearLayout>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        " /> <!-- 공백 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -132,20 +128,20 @@
             android:layout_gravity="center"
             android:textColor="#ab47bc"
             android:textStyle="bold"
-            android:textSize="25dp"/>
-        <LinearLayout
+            android:textSize="20dp"/>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="" />
             <Button
                 android:id="@+id/Btn_1365"
-                android:padding="2dp"
+                android:padding="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1365 검색 바로가기"
+                android:text="  1365 바로가기  "
                 android:background="@color/tabCourseBackground"/>
 
-        </LinearLayout>
 
         <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"

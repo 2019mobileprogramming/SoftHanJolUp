@@ -1,41 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <TableLayout
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/courseBackground">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TableRow>
-            <TextView
-                android:layout_width="0sp"
-                android:layout_weight="2.5"
+        android:layout_height="match_parent"
+        android:background="@color/bookMemoBackground">
+        <TableLayout
+            android:background="@color/tableTitleBackground"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_table_name">
+            <TableRow
+                android:layout_marginLeft="10dp"
+                android:padding="2dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/tableTitleText"
+                    android:text="책 제목"
+                    android:id="@+id/bookName"
+                    android:layout_width="40sp"
+                    android:layout_weight="2.4"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"                />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/tableTitleText"
+                    android:text="작가"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/title"
+                    android:textSize="22sp"                />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_below="@+id/course_table_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@color/bookMemoContentBackground"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="도서명"
-                android:textSize="15sp" />
-
-            <TextView
-                android:layout_width="0sp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="작가"
-                android:textSize="15sp"/>
-        </TableRow>
-    </TableLayout>
-
-
-
-    <ListView
-        android:layout_margin="12sp"
-        android:id="@+id/book_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="2sp"
-        android:divider="@color/tabCourseBackground"
-        android:dividerHeight="1sp"/>
-
-
+                android:orientation="vertical"
+                android:id="@+id/course_se1"
+                android:paddingBottom="5dp">
+                <ListView
+                    android:layout_margin="12sp"
+                    android:id="@+id/book_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2sp"
+                    android:divider="@color/tabCourseBackground"
+                    android:dividerHeight="1sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

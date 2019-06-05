@@ -4,13 +4,25 @@
     <color name="colorPrimaryDark">#8B329B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="buttonColor">#DCA9E6</color>
+
 
     <color name="tabCourseBackground">#D59BDF</color>
     <color name="tabCourseTextColor">#3B1E6D</color>
     <color name="tabCourseSelectedTextColor">#F1EDF7</color>
 
 
+    <color name="tableTitleText">#970AC5</color>
+    <color name="tablesubTitleText">#A42DCA</color>
+    <color name="tableTitleBackground">#F7F2F8</color>
+
     <color name="doneBackground">#F2E9F5</color>
     <color name="nodoneBackground">#FFFFFF</color>
     <color name="courseBackground">#FFFFFF</color>
+
+
+    <color name="bookMemoBackground">#E6E2E7</color>
+    <color name="bookMemoContentBackground">#FAF7FC</color>
+    <color name="bookMemoEditBackground">#FFFFFF</color>
+    <color name="bookMemoText">#2E003A</color>
 </resources>
