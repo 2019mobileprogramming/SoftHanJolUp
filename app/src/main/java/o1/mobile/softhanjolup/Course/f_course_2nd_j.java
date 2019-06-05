@@ -43,22 +43,6 @@ public class f_course_2nd_j  extends Fragment {
         list2 = (ListView)rootView.findViewById(R.id.second_2_list);
         selectDB();
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Cursor se1 = se1Index(position);
-                String str = se1.getString(se1.getColumnIndex("courseName"));
-                Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
-            }
-        });
-        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Cursor se1 = se2Index(position);
-                String str = se1.getString(se1.getColumnIndex("courseName"));
-                Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
-            }
-        });
 
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

@@ -1,6 +1,5 @@
 package o1.mobile.softhanjolup;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,11 +13,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,12 +22,13 @@ import java.util.ArrayList;
 import o1.mobile.softhanjolup.Book.a_book_main_j;
 import o1.mobile.softhanjolup.Course.a_course_main_j;
 import o1.mobile.softhanjolup.DB.changsa_DBHelper;
-import o1.mobile.softhanjolup.DB.course_DBAdapter;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
 import o1.mobile.softhanjolup.DB.inri_DBHelper;
 import o1.mobile.softhanjolup.DB.track_DBHelper;
 import o1.mobile.softhanjolup.English.a_english_main_j;
-import o1.mobile.softhanjolup.Setting.InitialActivity;
+import o1.mobile.softhanjolup.Init.InitialActivity;
+import o1.mobile.softhanjolup.Init.info_first_j;
+import o1.mobile.softhanjolup.Init.info_more_j;
 import o1.mobile.softhanjolup.Volunteer.a_volun_main_j;
 
 public class MainActivity extends AppCompatActivity
@@ -123,11 +120,9 @@ public class MainActivity extends AppCompatActivity
         int k = 0;
         for(k=0; k<12; k++){
             showCredit(k);
-            totalCredit += Integer.parseInt(creditList.get(0).getText().toString());
+            totalCredit += Integer.parseInt(creditList.get(k).getText().toString());
         }
         creditList.get(12).setText(Integer.toString(totalCredit));
-
-
 
     }
 
@@ -282,6 +277,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.SideBook) {//독후감 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_book_main_j.class);
+            startActivity(intent);
+        } else if (id == R.id.SideHow){
+            Intent intent = new Intent(getApplicationContext(), info_more_j.class);
             startActivity(intent);
         } else if(id == R.id.SideSetting){
             Intent intent = new Intent(getApplicationContext(), InitialActivity.class);

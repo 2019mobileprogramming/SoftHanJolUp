@@ -68,19 +68,6 @@ public class f_course_1st_j extends Fragment {
         list2 = (ListView) rootView.findViewById(R.id.first_2_list);
         selectDB();
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Cursor se1 = se1Index(position);
-            }
-        });
-        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Cursor se1 = se2Index(position);
-            }
-        });
-
 
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

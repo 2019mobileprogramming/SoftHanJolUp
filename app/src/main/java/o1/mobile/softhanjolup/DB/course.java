@@ -19,7 +19,7 @@ public class course {
         db.execSQL("INSERT INTO DB_Course VALUES(1,1, 1,'Practical English1',1,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(2,1, 1,'인성과 리더십',2,1, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(3,1, 1,'창의와 사고',2,1, 0);");
-        db.execSQL("INSERT INTO DB_Course VALUES(4,1, 1,'미술 감상과 비평',2,3, 0);");
+        db.execSQL("INSERT INTO DB_Course VALUES(4,1, 1,'미술 감상과 비평',2,7, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(5,1, 1,'컴퓨터 프로그래밍',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(6,1, 1,'웹 프로그래밍',3,5, 0);");
         db.execSQL("INSERT INTO DB_Course VALUES(7,1, 1,'이산수학',3,5, 0);");

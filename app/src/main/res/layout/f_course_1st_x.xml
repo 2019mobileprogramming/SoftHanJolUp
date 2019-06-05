@@ -5,70 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/courseBackground"    >
-    <TableLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TableRow
+        android:layout_height="match_parent"
+        android:background="@color/bookMemoBackground">
+        <TableLayout
             android:background="@color/tableTitleBackground"
-            android:layout_marginLeft="10dp"
-            android:padding="2dp">
-            <TextView
-                android:textColor="@color/tableTitleText"
-                android:id="@+id/courseName"
-                android:layout_width="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_table_name">
+            <TableRow
+                android:layout_marginLeft="10dp"
+                android:padding="2dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/tableTitleText"
+                    android:text="과목명"
+                    android:id="@+id/courseName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp" />
+                <TextView
+                    android:textColor="@color/tableTitleText"
+                    android:id="@+id/credit"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="학점"
+                    android:textSize="22sp" />
+                <TextView
+                    android:textColor="@color/tableTitleText"
+                    android:id="@+id/index_course"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="이수구분"
+                    android:textSize="22sp" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_below="@+id/course_table_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@color/bookMemoContentBackground"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="과목명"
-                android:textSize="22sp" />
-            <TextView
-                android:textColor="@color/tableTitleText"
-                android:id="@+id/credit"
-                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/course_se1"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:textSize="23sp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/tablesubTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1학기"/>
+
+                <ListView
+                    android:background="@color/bookMemoEditBackground"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/first_list"
+                    android:divider="@color/tabCourseBackground"
+                    android:dividerHeight="1sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>.
+
+            <LinearLayout
+                android:background="@color/bookMemoContentBackground"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="학점"
-                android:textSize="22sp" />
-            <TextView
-                android:textColor="@color/tableTitleText"
-                android:id="@+id/index_course"
-                android:layout_weight="2"
-                android:layout_height="wrap_content"
-                android:text="이수구분"
-                android:textSize="22sp" />
-        </TableRow>
-    </TableLayout>
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:textSize="23sp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/tablesubTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2학기"/>
 
-
-    <TextView
-        android:textSize="23sp"
-        android:layout_marginLeft="25dp"
-        android:textColor="@color/tablesubTitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1학기"/>
-
-    <ListView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/first_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"/>.
-    <TextView
-        android:textSize="23sp"
-        android:layout_marginLeft="25dp"
-        android:textColor="@color/tablesubTitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2학기"/>
-
-    <ListView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/first_2_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-
+                <ListView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/first_2_list"
+                    android:divider="@color/tabCourseBackground"
+                    android:dividerHeight="1sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#8B329B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="buttonColor">#DCA9E6</color>
+
 
     <color name="tabCourseBackground">#D59BDF</color>
     <color name="tabCourseTextColor">#3B1E6D</color>

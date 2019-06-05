@@ -2,7 +2,7 @@
     <string name="app_name">SoftHanJolUp</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_name">이름 넣을 곳@string</string>
+    <string name="nav_header_name">이름을 입력해 주세요</string>
     <string name="nav_credit1">졸업까지 </string>
     <string name="nav_credit2">/120 학점 남았습니다.</string>
     <string name="nav_header_desc">Navigation header@string</string>

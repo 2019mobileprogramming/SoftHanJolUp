@@ -14,19 +14,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import o1.mobile.softhanjolup.Course.a_course_main_j;
-import o1.mobile.softhanjolup.Course.f_course_1st_j;
-import o1.mobile.softhanjolup.Course.f_course_2nd_j;
 import o1.mobile.softhanjolup.DB.course_DBHelper;
 import o1.mobile.softhanjolup.English.a_english_main_j;
+import o1.mobile.softhanjolup.Init.info_first_j;
+import o1.mobile.softhanjolup.Init.info_more_j;
 import o1.mobile.softhanjolup.MainActivity;
 import o1.mobile.softhanjolup.R;
-import o1.mobile.softhanjolup.Setting.InitialActivity;
+import o1.mobile.softhanjolup.Init.InitialActivity;
 import o1.mobile.softhanjolup.Volunteer.a_volun_main_j;
 
 public class a_book_main_j extends AppCompatActivity
@@ -165,6 +164,9 @@ public class a_book_main_j extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.SideBook) {//독후감 창으로 이동
             Intent intent = new Intent(getApplicationContext(), a_book_main_j.class);
+            startActivity(intent);
+        } else if (id == R.id.SideHow){
+            Intent intent = new Intent(getApplicationContext(), info_more_j.class);
             startActivity(intent);
         }else if(id == R.id.SideSetting){
             Intent intent = new Intent(getApplicationContext(), InitialActivity.class);

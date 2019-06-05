@@ -81,7 +81,7 @@ public class a_book_memo_j extends AppCompatActivity {
         confirm.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 memoDB = book_memo_dbHelper.getWritableDatabase();
-                sql = "SELECT * FROM memoBook;";
+                sql = "SELECT * FROM memoBook";
                 cursor = memoDB.rawQuery(sql, null);
 
                 ContentValues values = new ContentValues();
@@ -92,11 +92,28 @@ public class a_book_memo_j extends AppCompatActivity {
                 values.put("content3", contentList.get(2).getText().toString());
                 values.put("content4", contentList.get(3).getText().toString());
                 values.put("content5", contentList.get(4).getText().toString());
+                Log.d("contentList1번",contentList.get(0).getText().toString());
+                Log.d("contentList1번",contentList.get(1).getText().toString());
+                Log.d("contentList1번",contentList.get(2).getText().toString());
+                Log.d("contentList1번",contentList.get(3).getText().toString());
+                Log.d("contentList1번",contentList.get(4).getText().toString());
 
-                if(cursor.getCount() > 0){//업데이트
+                cursor.moveToFirst();
+                int flag  =0;
+                for(int i=0; i<cursor.getCount(); i++){
+                    Log.d("contentList3",cursor.getString(cursor.getColumnIndex("title")));
+                    if(cursor.getString(cursor.getColumnIndex("title")).equals(bookName)){
+                        flag = 1;
+                    }
+                    cursor.moveToNext();
+                }
+
+                if(flag == 1){//업데이트
+                    Log.d("contentList업뎃",bookName);
                     memoDB.update("memoBook", values, "title=? and author=?", new String[]{bookName, bookAuthor});
                 }
                 else{//추가
+                    Log.d("contentList삽입",bookName);
                     memoDB.insert("memoBook", null, values);
                 }
 
@@ -107,18 +124,24 @@ public class a_book_memo_j extends AppCompatActivity {
 
     private void selectDB(){
         memoDB = book_memo_dbHelper.getWritableDatabase();
-        sql = "SELECT * FROM memoBook;where title='"+bookName+"' and author='"+bookAuthor+"'";
+        Log.d("contentList책이름2",bookName);
+        sql = "SELECT * FROM memoBook";
 
         cursor = memoDB.rawQuery(sql, null);
+
         cursor.moveToFirst();
-        if(cursor.getCount() > 0){
-            Log.d("contentList",Integer.toString(cursor.getColumnIndex("content1")));
-            Log.d("contentList",cursor.getString(0));
-            contentList.get(0).setText(cursor.getString(cursor.getColumnIndex("content1")));
-            contentList.get(1).setText(cursor.getString(cursor.getColumnIndex("content2")));
-            contentList.get(2).setText(cursor.getString(cursor.getColumnIndex("content3")));
-            contentList.get(3).setText(cursor.getString(cursor.getColumnIndex("content4")));
-            contentList.get(4).setText(cursor.getString(cursor.getColumnIndex("content5")));
+        for(int i=0; i<cursor.getCount(); i++){
+            Log.d("contentList포문",cursor.getString(cursor.getColumnIndex("title")));
+            if(cursor.getString(cursor.getColumnIndex("title")).equals(bookName)){
+                contentList.get(0).setText(cursor.getString(cursor.getColumnIndex("content1")));
+                contentList.get(1).setText(cursor.getString(cursor.getColumnIndex("content2")));
+                contentList.get(2).setText(cursor.getString(cursor.getColumnIndex("content3")));
+                contentList.get(3).setText(cursor.getString(cursor.getColumnIndex("content4")));
+                contentList.get(4).setText(cursor.getString(cursor.getColumnIndex("content5")));
+
+            }
+            cursor.moveToNext();
         }
+
     }
 }

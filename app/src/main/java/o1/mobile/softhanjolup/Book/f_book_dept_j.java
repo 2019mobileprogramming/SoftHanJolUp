@@ -40,14 +40,6 @@ public class f_book_dept_j extends Fragment {
 
         selectDB();
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                cursor.moveToPosition(position);
-                String str = cursor.getString(cursor.getColumnIndex("title"));
-                Toast.makeText(getContext(), str, Toast.LENGTH_SHORT).show();
-            }
-        });
 
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
             @Override

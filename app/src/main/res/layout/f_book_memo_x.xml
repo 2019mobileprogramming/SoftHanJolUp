@@ -3,26 +3,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bookMemoBackground">
 
     <TableLayout
-        android:layout_marginLeft="10sp"
-        android:layout_marginRight="10sp"
+        android:background="@color/tableTitleBackground"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TableRow>
+        android:layout_height="wrap_content"
+        android:id="@+id/course_table_name">
+        <TableRow
+            android:layout_marginLeft="10dp"
+            android:padding="2dp">
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/tableTitleText"
                 android:text="책 제목"
+                android:id="@+id/bookName"
                 android:layout_width="40sp"
                 android:layout_weight="2.4"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:textSize="22sp"                />
 
             <TextView
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:textColor="@color/tableTitleText"
                 android:text="작가"
@@ -35,22 +40,37 @@
     </TableLayout>
 
 
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_below="@+id/course_table_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@color/bookMemoContentBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/course_se1"
+                android:paddingBottom="5dp">
 
-    <ListView
-        android:layout_margin="12sp"
-        android:id="@+id/book_memo_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="2sp"
-        android:divider="@color/tabCourseBackground"
-        android:dividerHeight="1sp"/>
-    <TextView
-        android:id="@+id/book_memo_null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="아직 작성된 독후감이 없어요!"
-        android:layout_gravity="center"
-        android:visibility="invisible"/>
-
+                <ListView
+                    android:layout_margin="12sp"
+                    android:id="@+id/book_memo_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2sp"
+                    android:divider="@color/tabCourseBackground"
+                    android:dividerHeight="1sp"/>
+                <TextView
+                    android:id="@+id/book_memo_null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아직 작성된 독후감이 없어요!"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
